@@ -1,0 +1,12 @@
+---
+version: '2'
+services:
+  dockerapp:
+    build: dockerapp
+    ports:
+      - "80:5000"
+    volumes:
+      - ./app:/app
+
+  redis:
+    image: redis:3.2.0
